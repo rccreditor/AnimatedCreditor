@@ -6,7 +6,7 @@ import AnimatedTitle from "./AnimatedTitle";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Course = () => {
+const About = () => {
   useGSAP(() => {
     const clipAnimation = gsap.timeline({
       scrollTrigger: {
@@ -27,7 +27,7 @@ const Course = () => {
   });
 
   return (
-    <div id="course" className="min-h-screen w-screen">
+    <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
         <p className="font-general text-sm uppercase md:text-[10px]">
           Welcome to Zentry
@@ -38,7 +38,7 @@ const Course = () => {
           containerClass="mt-5 !text-black text-center"
         />
 
-        <div className="course-subtext">
+        <div className="about-subtext">
           <p>The Game of Games begins—your life, now an epic MMORPG</p>
           <p className="text-gray-500">
             Zentry unites every player from countless games and platforms, both
@@ -60,4 +60,4 @@ const Course = () => {
   );
 };
 
-export default Course;
+export default About;

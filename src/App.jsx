@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import Hero from "./components/Hero";
 import NavBar from "./components/Navbar";
@@ -8,15 +9,37 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <main className="relative min-h-screen w-screen overflow-x-hidden">
-      <NavBar />
-      <Hero />
-      <About />
-      <Features />
-      <Story />
-      <Contact />
-      <Footer />
-    </main>
+    <Router>
+      <main className="relative min-h-screen w-screen overflow-x-hidden">
+        <NavBar />
+        <Routes>
+          {/* Homepage */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <About />
+                <Features />
+                <Story />
+                <Contact />
+              </>
+            }
+          />
+
+          {/* Individual Pages */}
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Features />} />
+          <Route path="/prologue" element={<Story />} />
+          <Route path="/course" element={<Hero />} /> {/* Replace with course page later */}
+          <Route path="/contact" element={<Contact />} />
+
+          {/* Optional: Fallback route */}
+          <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+        </Routes>
+        <Footer />
+      </main>
+    </Router>
   );
 }
 

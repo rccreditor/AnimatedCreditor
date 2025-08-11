@@ -3,10 +3,17 @@ import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
+import { Link } from "react-router-dom"; // ✅ Added for routing
 
 import Button from "./Button";
 
-const navItems = ["About", "Services", "Prologue", "Course", "Contact"];
+const navItems = [
+  { name: "About", path: "/about" },
+  { name: "Services", path: "/services" },
+  { name: "Membership", path: "/prologue" },
+  { name: "Course", path: "/course" },
+  { name: "Contact", path: "/contact" },
+];
 
 const NavBar = () => {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
@@ -66,26 +73,29 @@ const NavBar = () => {
           <div className="flex items-center gap-7">
             <img src="/img/logo.png" alt="logo" className="w-10" />
 
+          {/* ✅ Courses button now scrolls to About section */}
+          <a href="#about">
             <Button
               id="product-button"
               title="Courses"
               rightIcon={<TiLocationArrow />}
               containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
             />
+          </a>
+
           </div>
 
           {/* Navigation Links and Audio Button */}
           <div className="flex h-full items-center">
             <div className="hidden md:block">
               {navItems.map((item, index) => (
-                <a
+                <Link
                   key={index}
-                  href="#"
+                  to={item.path}
                   className="nav-hover-btn"
-                  onClick={(e) => e.preventDefault()}
                 >
-                  {item}
-                </a>
+                  {item.name}
+                </Link>
               ))}
             </div>
 
