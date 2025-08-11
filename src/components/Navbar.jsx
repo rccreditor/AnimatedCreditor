@@ -83,13 +83,13 @@ const NavBar = () => {
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
-          
-          {/* Logo → Redirect to Home */}
+
+          {/* Logo */}
           <div className="flex items-center gap-7">
             <Link to="/">
               <img src="/img/logo.png" alt="logo" className="w-10 cursor-pointer" />
             </Link>
-            <a href="#about">
+            <a href="#about" className="hidden md:block">
               <Button
                 id="product-button"
                 title="Courses"
@@ -99,9 +99,9 @@ const NavBar = () => {
             </a>
           </div>
 
-          {/* Navigation */}
+          {/* Desktop Navigation (large screens only) */}
           <div className="flex h-full items-center">
-            <div className="hidden md:flex gap-6 items-center">
+            <div className="hidden lg:flex gap-6 items-center">
               {navItems.map((item, index) => (
                 <div
                   key={index}
@@ -134,19 +134,127 @@ const NavBar = () => {
                 </div>
               ))}
 
-              {/* Login Button */}
+              {/* Login Button - Forced Blue */}
               <Link to="/login">
                 <Button
                   title="Login"
-                  containerClass="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+                  containerClass="!bg-blue-500 !text-white px-4 py-2 rounded-md transition-colors duration-300 hover:!bg-blue-600"
                 />
               </Link>
+            </div>
+
+            {/* Tablet Navigation (md to lg) */}
+            <div className="hidden md:flex lg:hidden">
+              <button
+                onClick={() =>
+                  setDropdownOpen(dropdownOpen === "tablet" ? null : "tablet")
+                }
+                className="text-white focus:outline-none"
+              >
+                ☰
+              </button>
+              {dropdownOpen === "tablet" && (
+                <div className="absolute top-16 right-4 bg-black bg-opacity-95 rounded-md shadow-lg p-4 w-64">
+                  {navItems.map((item, idx) => (
+                    <div key={idx} className="mb-2">
+                      {!item.dropdown ? (
+                        <Link
+                          to={item.path}
+                          onClick={() => setDropdownOpen(null)}
+                          className="block text-white py-2 hover:bg-gray-700 rounded"
+                        >
+                          {item.name}
+                        </Link>
+                      ) : (
+                        <details>
+                          <summary className="cursor-pointer text-white py-2 hover:bg-gray-700 rounded">
+                            {item.name}
+                          </summary>
+                          <div className="pl-4">
+                            {item.dropdown.map((sub, sidx) => (
+                              <Link
+                                key={sidx}
+                                to={sub.path}
+                                onClick={() => setDropdownOpen(null)}
+                                className="block text-white py-2 hover:bg-gray-700 rounded"
+                              >
+                                {sub.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </details>
+                      )}
+                    </div>
+                  ))}
+                  <Link
+                    to="/login"
+                    onClick={() => setDropdownOpen(null)}
+                    className="block bg-blue-500 text-white text-center py-2 rounded hover:bg-blue-600"
+                  >
+                    Login
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Navigation (< md) */}
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={() =>
+                  setDropdownOpen(dropdownOpen === "mobile" ? null : "mobile")
+                }
+                className="text-white focus:outline-none"
+              >
+                ☰
+              </button>
+              {dropdownOpen === "mobile" && (
+                <div className="absolute top-16 right-4 bg-black bg-opacity-95 rounded-md shadow-lg p-4 w-48">
+                  {navItems.map((item, idx) => (
+                    <div key={idx} className="mb-2">
+                      {!item.dropdown ? (
+                        <Link
+                          to={item.path}
+                          onClick={() => setDropdownOpen(null)}
+                          className="block text-white py-2 hover:bg-gray-700 rounded"
+                        >
+                          {item.name}
+                        </Link>
+                      ) : (
+                        <details>
+                          <summary className="cursor-pointer text-white py-2 hover:bg-gray-700 rounded">
+                            {item.name}
+                          </summary>
+                          <div className="pl-4">
+                            {item.dropdown.map((sub, sidx) => (
+                              <Link
+                                key={sidx}
+                                to={sub.path}
+                                onClick={() => setDropdownOpen(null)}
+                                className="block text-white py-2 hover:bg-gray-700 rounded"
+                              >
+                                {sub.name}
+                              </Link>
+                            ))}
+                          </div>
+                        </details>
+                      )}
+                    </div>
+                  ))}
+                  <Link
+                    to="/login"
+                    onClick={() => setDropdownOpen(null)}
+                    className="block bg-blue-500 text-white text-center py-2 rounded hover:bg-blue-600"
+                  >
+                    Login
+                  </Link>
+                </div>
+              )}
             </div>
 
             {/* Audio Button */}
             <button
               onClick={toggleAudioIndicator}
-              className="ml-10 flex items-center space-x-0.5"
+              className="ml-4 md:ml-10 flex items-center space-x-0.5"
             >
               <audio
                 ref={audioElementRef}
