@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./components/About";
+import CreditorStats from "./components/CreditorStats";
+import MasterClass from "./components/MasterClassBanner";
 import Hero from "./components/Hero";
 import NavBar from "./components/Navbar";
 import Features from "./components/Features";
@@ -19,6 +21,8 @@ function App() {
             element={
               <>
                 <Hero />
+                <CreditorStats />
+                <MasterClass />
                 <About />
                 <Features />
                 <Story />
