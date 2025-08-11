@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-subtext p {
+  line-height: 1.6;
+}
+
+.mask-clip-path {
+  clip-path: inset(0 round 50%);
+  transition: clip-path 0.8s ease-in-out;
+}
+
+.about-image img {
+  filter: brightness(0.85) contrast(1.1) saturate(1.2);
+}

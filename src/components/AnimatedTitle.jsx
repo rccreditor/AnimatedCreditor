@@ -31,11 +31,15 @@ const AnimatedTitle = ({ title, containerClass }) => {
       );
     }, containerRef);
 
-    return () => ctx.revert(); // Clean up on unmount
+    return () => ctx.revert();
   }, []);
 
   return (
-    <div ref={containerRef} className={clsx("animated-title", containerClass)}>
+    <div
+      ref={containerRef}
+      className={clsx("animated-title", containerClass)}
+      style={{ color: "#4895e4" }}
+    >
       {title.split("<br />").map((line, index) => (
         <div
           key={index}
