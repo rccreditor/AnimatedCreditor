@@ -9,6 +9,8 @@ import Story from "./components/Story";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import MembershipMC from "./pages/MembershipMC";
+import AboutCreditor from "./components/AboutCreditor";
+import AboutPaul from "./components/AboutPaul";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
               <>
                 <Hero />
                 <CreditorStats />
+                <AboutCreditor />
+                <AboutPaul />
                 <MasterClass />
                 <About />
                 <Features />
