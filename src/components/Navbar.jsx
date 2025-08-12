@@ -25,7 +25,7 @@ const navItems = [
       { name: "Merchant Processing", path: "/services/merchant-processing" }
     ]
   },
-  { name: "Membership", path: "/prologue" },
+  { name: "Membership", path: "/masterclass" },
   { name: "Contact", path: "/contact" },
 ];
 

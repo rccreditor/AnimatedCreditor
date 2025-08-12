@@ -8,6 +8,7 @@ import Features from "./components/Features";
 import Story from "./components/Story";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import MembershipMC from "./pages/MembershipMC";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/prologue" element={<Story />} />
           <Route path="/course" element={<Hero />} /> {/* Replace with course page later */}
           <Route path="/contact" element={<Contact />} />
+          <Route path="/masterclass" element={<MembershipMC />} />
 
           {/* Optional: Fallback route */}
           <Route path="*" element={<h1>404 - Page Not Found</h1>} />
