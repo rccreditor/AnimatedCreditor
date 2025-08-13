@@ -94,7 +94,7 @@ const AboutSection = () => {
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1f618d] to-[#154360]">
               <AnimatedTitle
-                title="ABO<b>U</b>T CREDIT<b>O</b>R <b>A</b>CADEM<b>Y</b>"
+                title="ABOUT CREDITOR ACADEMY"
                 containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
               />
               {/* About Creditor Academy */}

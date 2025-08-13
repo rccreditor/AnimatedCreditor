@@ -234,7 +234,7 @@ const Features = () => (
     <div className="container mx-auto px-3 md:px-10">
       <div className="px-5 py-32 text-center flex flex-col items-center">
         <AnimatedTitle
-          title="The R<b>o</b>adm<b>a</b>p Series"
+          title="The Roadmap Series"
           containerClass="mt-5 !text-blue"
         />
         <p className="font-circular-web text-lg text-blue-50 mt-6">

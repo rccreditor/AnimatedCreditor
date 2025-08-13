@@ -9,9 +9,9 @@ const fadeInUp = {
     opacity: 1, 
     y: 0, 
     transition: { 
-      duration: 0.5,  // Reduced from 0.8
+      duration: 0.5,
       ease: [0.6, -0.05, 0.01, 0.99],
-      staggerChildren: 0.05  // Reduced from 0.1
+      staggerChildren: 0.05
     } 
   }
 };
@@ -21,8 +21,8 @@ const staggerContainer = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.0,  // Reduced from 0.2
-      delayChildren: 0.0  // Reduced from 0.3
+      staggerChildren: 0.0,
+      delayChildren: 0.0
     }
   }
 };
@@ -35,9 +35,9 @@ const particleVariants = {
     x: [0, (Math.random() - 0.5) * 100],
     scale: [1, 1.5],
     transition: {
-      duration: 1 + Math.random() * 2,  // Reduced from 2-5 to 1-3
+      duration: 1 + Math.random() * 2,
       repeat: Infinity,
-      delay: i * 0.05,  // Reduced from 0.1
+      delay: i * 0.05,
       ease: "easeOut"
     }
   })
@@ -47,7 +47,7 @@ const floatingVariants = {
   float: {
     y: [0, -20],
     transition: {
-      duration: 2,  // Reduced from 3
+      duration: 2,
       repeat: Infinity,
       repeatType: "reverse",
       ease: "easeInOut"
@@ -61,7 +61,7 @@ const gridItemVariants = {
     opacity: 0.03,
     scale: 1,
     transition: {
-      duration: 0.3,  // Reduced from 0.5
+      duration: 0.3,
       ease: "easeOut"
     }
   }
@@ -95,7 +95,7 @@ const CreditorPaulintro = () => {
       variants={staggerContainer}
       style={{
         fontFamily: "'Poppins', sans-serif",
-        background: "radial-gradient(ellipse at top, #0f172a, #020617)",
+        background: "linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%)",
         padding: isMobile ? "40px 5%" : "80px 5%",
         width: "100%",
         display: "grid",
@@ -127,13 +127,13 @@ const CreditorPaulintro = () => {
             initial="hidden"
             animate="visible"
             transition={{ 
-              delay: Math.random() * 0.5,  // Reduced from 1
+              delay: Math.random() * 0.5,
               repeat: Infinity,
               repeatType: "reverse",
-              duration: 2 + Math.random() * 3  // Reduced from 3-7 to 2-5
+              duration: 2 + Math.random() * 3
             }}
             style={{
-              border: "1px solid rgba(125, 211, 252, 0.1)",
+              border: "1px solid rgba(2, 132, 199, 0.1)",
               borderRadius: "2px"
             }}
           />
@@ -155,27 +155,27 @@ const CreditorPaulintro = () => {
         <motion.path
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
-          transition={{ duration: 1.5, delay: 0.2 }}  // Reduced from 3, 0.5
+          transition={{ duration: 1.5, delay: 0.2 }}
           d="M0,100 Q150,50 300,100 T600,100 T900,50 T1200,100"
-          stroke="rgba(125, 211, 252, 0.5)"
+          stroke="rgba(2, 132, 199, 0.5)"
           strokeWidth="1"
           fill="none"
         />
         <motion.path
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
-          transition={{ duration: 1.5, delay: 0.4 }}  // Reduced from 3, 1
+          transition={{ duration: 1.5, delay: 0.4 }}
           d="M50,300 Q200,250 350,300 T650,300 T950,250 T1250,300"
-          stroke="rgba(125, 211, 252, 0.5)"
+          stroke="rgba(2, 132, 199, 0.5)"
           strokeWidth="1"
           fill="none"
         />
         <motion.path
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 1 }}
-          transition={{ duration: 1.5, delay: 0.6 }}  // Reduced from 3, 1.5
+          transition={{ duration: 1.5, delay: 0.6 }}
           d="M100,500 Q250,450 400,500 T700,500 T1000,450 T1300,500"
-          stroke="rgba(125, 211, 252, 0.5)"
+          stroke="rgba(2, 132, 199, 0.5)"
           strokeWidth="1"
           fill="none"
         />
@@ -194,7 +194,7 @@ const CreditorPaulintro = () => {
               left: `${Math.random() * 100}%`,
               width: `${Math.random() * 6 + 2}px`,
               height: `${Math.random() * 6 + 2}px`,
-              background: `rgba(125, 211, 252, ${Math.random() * 0.5 + 0.3})`,
+              background: `rgba(2, 132, 199, ${Math.random() * 0.5 + 0.3})`,
               borderRadius: "50%",
               zIndex: 1
             }}
@@ -210,7 +210,7 @@ const CreditorPaulintro = () => {
           opacity: [0.2, 0.4, 0.2]
         }}
         transition={{
-          duration: 10,  // Reduced from 15
+          duration: 10,
           repeat: Infinity,
           ease: "easeInOut"
         }}
@@ -220,7 +220,7 @@ const CreditorPaulintro = () => {
           right: "10%",
           width: "300px",
           height: "300px",
-          background: "radial-gradient(circle, rgba(2, 132, 199, 0.4), transparent 70%)",
+          background: "radial-gradient(circle, rgba(2, 132, 199, 0.2), transparent 70%)",
           borderRadius: "50%",
           filter: "blur(60px)",
           zIndex: 0
@@ -234,10 +234,10 @@ const CreditorPaulintro = () => {
           opacity: [0.2, 0.4, 0.2]
         }}
         transition={{
-          duration: 12,  // Reduced from 18
+          duration: 12,
           repeat: Infinity,
           ease: "easeInOut",
-          delay: 1.5  // Reduced from 3
+          delay: 1.5
         }}
         style={{
           position: "absolute",
@@ -245,7 +245,7 @@ const CreditorPaulintro = () => {
           left: "10%",
           width: "400px",
           height: "400px",
-          background: "radial-gradient(circle, rgba(125, 211, 252, 0.3), transparent 70%)",
+          background: "radial-gradient(circle, rgba(2, 132, 199, 0.15), transparent 70%)",
           borderRadius: "50%",
           filter: "blur(60px)",
           zIndex: 0
@@ -266,28 +266,16 @@ const CreditorPaulintro = () => {
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}  // Reduced from 0.8, 0.3
+          transition={{ duration: 0.5, delay: 0.1 }}
           whileHover={{ 
             scale: 1.03,
-            textShadow: "0 5px 15px rgba(125, 211, 252, 0.5)"
-          }}
-          style={{
-            fontSize: isMobile ? "2rem" : "clamp(2.5rem, 5vw, 3.5rem)",
-            fontWeight: 700,
-            lineHeight: 1.2,
-            background: "linear-gradient(90deg, #ffffff 0%, #7dd3fc 100%)",
-            WebkitBackgroundClip: "text",
-            backgroundClip: "text",
-            color: "transparent",
-            marginBottom: "15px",
-            transition: "all 0.2s ease"
+            textShadow: "0 5px 15px rgba(0, 170, 255, 0.5)"
           }}
         >
           <AnimatedTitle
-            title="P<b>A</b>ULMICH<b>A</b>EL ROWL<b>A</b>ND"
+            title="PAULMICHAEL ROWLAND"
             containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
           />
-          {/* Paulmichael Rowland */}
         </motion.h1>
 
         <motion.div
@@ -302,11 +290,11 @@ const CreditorPaulintro = () => {
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 0.5, delay: 0.2, ease: [0.6, -0.05, 0.01, 0.99] }}  // Reduced from 0.8, 0.5
+            transition={{ duration: 0.5, delay: 0.2, ease: [0.6, -0.05, 0.01, 0.99] }}
             style={{
               width: "80px",
               height: "4px",
-              background: "linear-gradient(90deg, #7dd3fc, #bae6fd)",
+              background: "linear-gradient(90deg, #0284c7, #7dd3fc)",
               marginRight: "20px",
               transformOrigin: "left center"
             }}
@@ -314,11 +302,11 @@ const CreditorPaulintro = () => {
           <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 0.3 }}  // Reduced from 0.6, 0.7
+            transition={{ duration: 0.4, delay: 0.3 }}
             style={{
               fontSize: "1rem",
               fontWeight: 600,
-              color: "#bae6fd",
+              color: "#0369a1",
               letterSpacing: "2px",
               textTransform: "uppercase"
             }}
@@ -344,25 +332,25 @@ const CreditorPaulintro = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ 
-                  duration: 0.3,  // Reduced from 0.5
-                  delay: 0.4 + index * 0.05,  // Reduced from 0.8 + 0.1
+                  duration: 0.3,
+                  delay: 0.4 + index * 0.05,
                   type: "spring",
                   stiffness: 300
                 }}
                 whileHover={{ 
                   scale: 1.05,
-                  boxShadow: "0 5px 15px rgba(125, 211, 252, 0.3)"
+                  boxShadow: "0 5px 15px rgba(2, 132, 199, 0.3)"
                 }}
                 style={{
-                  background: "rgba(125, 211, 252, 0.1)",
-                  color: "#bae6fd",
+                  background: "rgba(2, 132, 199, 0.1)",
+                  color: "#075985",
                   padding: "8px 16px",
                   borderRadius: "20px",
                   fontSize: "0.9rem",
                   fontWeight: 600,
                   cursor: "default",
                   transition: "all 0.2s ease",
-                  border: "1px solid rgba(125, 211, 252, 0.2)"
+                  border: "1px solid rgba(2, 132, 199, 0.2)"
                 }}
               >
                 {item}
@@ -375,11 +363,11 @@ const CreditorPaulintro = () => {
           variants={fadeInUp}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}  // Reduced from 0.8, 1.1
+          transition={{ duration: 0.5, delay: 0.6 }}
           style={{
             fontSize: "1.05rem",
             lineHeight: 1.8,
-            color: "#e2e8f0",
+            color: "#1e40af",
             marginBottom: "40px"
           }}
         >
@@ -387,18 +375,18 @@ const CreditorPaulintro = () => {
           <motion.strong
             initial={{ backgroundSize: "0% 8px" }}
             animate={{ backgroundSize: "100% 8px" }}
-            transition={{ duration: 0.5, delay: 0.7 }}  // Reduced from 0.8, 1.2
+            transition={{ duration: 0.5, delay: 0.7 }}
             whileHover={{ 
               backgroundSize: "100% 100%",
-              color: "#0f172a",
+              color: "#ffffff",
               padding: "0 5px"
             }}
             style={{
-              color: "#7dd3fc",
+              color: "#0284c7",
               fontWeight: 600,
               position: "relative",
               display: "inline-block",
-              backgroundImage: "linear-gradient(to right, rgba(125,211,252,0.2), rgba(125,211,252,0.2))",
+              backgroundImage: "linear-gradient(to right, rgba(2,132,199,0.2), rgba(2,132,199,0.2))",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "0 88%",
               backgroundSize: "0% 8px",
@@ -430,24 +418,24 @@ const CreditorPaulintro = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ 
-                duration: 0.4,  // Reduced from 0.6
-                delay: 0.8 + index * 0.05,  // Reduced from 1.3 + 0.1
+                duration: 0.4,
+                delay: 0.8 + index * 0.05,
                 type: "spring",
                 stiffness: 200
               }}
               whileHover={{ 
                 y: -5,
-                boxShadow: "0 10px 25px rgba(125, 211, 252, 0.3)"
+                boxShadow: "0 10px 25px rgba(2, 132, 199, 0.3)"
               }}
               style={{
-                background: "rgba(15, 23, 42, 0.5)",
+                background: "rgba(255, 255, 255, 0.7)",
                 padding: "20px",
                 borderRadius: "12px",
-                boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
+                boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
                 textAlign: "center",
                 transition: "all 0.2s ease",
                 cursor: "default",
-                border: "1px solid rgba(125, 211, 252, 0.1)",
+                border: "1px solid rgba(2, 132, 199, 0.1)",
                 backdropFilter: "blur(5px)"
               }}
             >
@@ -456,14 +444,14 @@ const CreditorPaulintro = () => {
                 style={{
                   fontSize: "1.8rem",
                   fontWeight: 700,
-                  color: "#7dd3fc",
+                  color: "#0284c7",
                   lineHeight: 1,
                   transition: "all 0.2s ease"
                 }}
               >
                 {stat.value}
               </motion.div>
-              <div style={{ fontSize: "0.9rem", color: "#bae6fd" }}>{stat.label}</div>
+              <div style={{ fontSize: "0.9rem", color: "#075985" }}>{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -471,33 +459,33 @@ const CreditorPaulintro = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.9 }}  // Reduced from 0.8, 1.6
+          transition={{ duration: 0.5, delay: 0.9 }}
           whileHover={{ 
             y: -5,
-            boxShadow: "0 15px 35px rgba(125, 211, 252, 0.3)"
+            boxShadow: "0 15px 35px rgba(2, 132, 199, 0.3)"
           }}
           style={{
-            background: "rgba(15, 23, 42, 0.5)",
+            background: "rgba(255, 255, 255, 0.7)",
             padding: "30px",
             borderRadius: "16px",
-            boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
             position: "relative",
             transition: "all 0.2s ease",
             cursor: "default",
-            border: "1px solid rgba(125, 211, 252, 0.1)",
+            border: "1px solid rgba(2, 132, 199, 0.1)",
             backdropFilter: "blur(5px)"
           }}
         >
           <motion.div
             initial={{ height: 0 }}
             animate={{ height: "100%" }}
-            transition={{ duration: 0.5, delay: 1.0 }}  // Reduced from 0.8, 1.7
+            transition={{ duration: 0.5, delay: 1.0 }}
             style={{
               position: "absolute",
               top: 0,
               left: 0,
               width: "5px",
-              background: "linear-gradient(to bottom, #7dd3fc, #bae6fd)",
+              background: "linear-gradient(to bottom, #0284c7, #7dd3fc)",
               borderRadius: "5px"
             }}
           />
@@ -505,7 +493,7 @@ const CreditorPaulintro = () => {
             style={{
               fontSize: "1.3rem",
               fontWeight: 600,
-              color: "#ffffff",
+              color: "#1e3a8a",
               marginBottom: "15px",
               paddingLeft: "15px"
             }}
@@ -515,11 +503,11 @@ const CreditorPaulintro = () => {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.4, delay: 1.1 }}  // Reduced from 0.6, 1.8
+            transition={{ duration: 0.4, delay: 1.1 }}
             style={{
               fontSize: "1.05rem",
               lineHeight: 1.8,
-              color: "#e2e8f0",
+              color: "#1e40af",
               paddingLeft: "15px",
               fontStyle: "italic"
             }}
@@ -547,7 +535,7 @@ const CreditorPaulintro = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}  // Reduced from 0.8, 0.5
+          transition={{ duration: 0.5, delay: 0.2 }}
           whileHover={{ 
             scale: 1.03,
             transition: { duration: 0.2 }
@@ -576,7 +564,7 @@ const CreditorPaulintro = () => {
               transform: "translate(-50%, -50%)",
               width: "100%",
               height: "100%",
-              background: "radial-gradient(circle, rgba(125,211,252,0.6), transparent 70%)",
+              background: "radial-gradient(circle, rgba(2,132,199,0.4), transparent 70%)",
               borderRadius: "50%",
               zIndex: -1,
               filter: "blur(30px)"
@@ -597,12 +585,12 @@ const CreditorPaulintro = () => {
               alt="Paulmichael Rowland"
               initial={{ rotateY: 0 }}
               animate={{ rotateY: isHovered ? 5 : 0 }}
-              transition={{ duration: 0.2 }}  // Reduced from 0.3
+              transition={{ duration: 0.2 }}
               style={{
                 width: "100%",
                 borderRadius: "20px",
-                boxShadow: "0 25px 50px -15px rgba(125,211,252,0.4)",
-                border: "10px solid rgba(255,255,255,0.1)",
+                boxShadow: "0 25px 50px -15px rgba(2,132,199,0.4)",
+                border: "10px solid rgba(255,255,255,0.3)",
                 transformStyle: "preserve-3d",
                 cursor: "pointer",
                 backdropFilter: "blur(2px)"
@@ -615,16 +603,16 @@ const CreditorPaulintro = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}  // Reduced from 0.8, 0.8
+          transition={{ duration: 0.5, delay: 0.4 }}
           whileHover={{ 
             y: -5,
-            boxShadow: "0 15px 35px rgba(125, 211, 252, 0.3)"
+            boxShadow: "0 15px 35px rgba(2, 132, 199, 0.3)"
           }}
           style={{
-            background: "rgba(15, 23, 42, 0.5)",
+            background: "rgba(255, 255, 255, 0.7)",
             padding: "30px",
             borderRadius: "16px",
-            boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
             width: "100%",
             maxWidth: "500px",
             marginTop: "40px",
@@ -632,7 +620,7 @@ const CreditorPaulintro = () => {
             transition: "all 0.2s ease",
             cursor: "default",
             overflow: "hidden",
-            border: "1px solid rgba(125, 211, 252, 0.1)",
+            border: "1px solid rgba(2, 132, 199, 0.1)",
             backdropFilter: "blur(5px)"
           }}
         >
@@ -640,13 +628,13 @@ const CreditorPaulintro = () => {
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: "100%" }}
-            transition={{ duration: 0.6, delay: 0.5 }}  // Reduced from 1, 1
+            transition={{ duration: 0.6, delay: 0.5 }}
             style={{
               position: "absolute",
               top: 0,
               left: 0,
               height: "3px",
-              background: "linear-gradient(to right, #7dd3fc, #bae6fd, #7dd3fc)",
+              background: "linear-gradient(to right, #0284c7, #7dd3fc, #0284c7)",
               zIndex: 3
             }}
           />
@@ -655,7 +643,7 @@ const CreditorPaulintro = () => {
             style={{
               fontSize: "1.2rem",
               fontWeight: 600,
-              color: "#7dd3fc",
+              color: "#0284c7",
               marginBottom: "20px",
               position: "relative"
             }}
@@ -663,7 +651,7 @@ const CreditorPaulintro = () => {
             <motion.span
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4, delay: 0.6 }}  // Reduced from 0.6, 1.1
+              transition={{ duration: 0.4, delay: 0.6 }}
             >
               Key Expertise:
             </motion.span>
@@ -690,17 +678,17 @@ const CreditorPaulintro = () => {
                 key={index}
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: 0.7 + index * 0.05 }}  // Reduced from 0.5, 1.2 + 0.1
+                transition={{ duration: 0.3, delay: 0.7 + index * 0.05 }}
                 whileHover={{ 
                   x: 5,
-                  color: "#7dd3fc"
+                  color: "#0284c7"
                 }}
                 style={{
                   marginBottom: "12px",
                   position: "relative",
                   paddingLeft: "25px",
                   fontSize: "1rem",
-                  color: "#e2e8f0",
+                  color: "#1e40af",
                   transition: "all 0.2s ease"
                 }}
               >
@@ -713,7 +701,7 @@ const CreditorPaulintro = () => {
                   style={{
                     position: "absolute",
                     left: 0,
-                    color: "#7dd3fc",
+                    color: "#0284c7",
                     fontWeight: "bold",
                     display: "inline-block"
                   }}

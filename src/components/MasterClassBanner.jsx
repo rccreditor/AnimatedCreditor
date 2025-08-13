@@ -112,10 +112,10 @@ export default function BannerPage() {
         >
           <BentoTilt className="border border-gray-700 h-[50vh] sm:h-[80vh] w-full overflow-hidden rounded-md shadow-lg">
             <BentoCard
-              src="/videos/feature-1.mp4"
+              src="/videos/Banner.mp4"
               title={
                 <AnimatedTitle
-                  title="M<b>a</b>ste<b>r</b>cl<b>a</b>ss Membe<b>r</b>ship"
+                  title="Masterclass Membership"
                   containerClass="mt-3 sm:mt-5 !text-white"
                 />
               }

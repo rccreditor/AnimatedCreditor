@@ -37,8 +37,11 @@ const AnimatedTitle = ({ title, containerClass }) => {
   return (
     <div
       ref={containerRef}
-      className={clsx("animated-title", containerClass)}
-      style={{ color: "#4895e4" }}
+      className={clsx(
+        "animated-title font-poppins font-normal", // Added Poppins font
+        containerClass
+      )}
+      style={{ color: "#89CFF0" }}
     >
       {title.split("<br />").map((line, index) => (
         <div

@@ -112,7 +112,7 @@ const CreditorStats = () => {
         justifyContent: "center",
         flexWrap: "wrap",
         gap: "35px",
-        background: "linear-gradient(135deg, #0b1622, #1c2a3a, #0b1622)",
+        background: "linear-gradient(135deg, #4d8bcdff, #4e95e7ff, #0d6fd8ff)",
       }}
     >
       {/* Aurora Background Layers */}
