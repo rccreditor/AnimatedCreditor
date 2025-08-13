@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import MembershipMC from "./pages/MembershipMC";
 import AboutCreditor from "./components/AboutCreditor";
 import AboutPaul from "./components/AboutPaul";
+import WebsitePage from "./pages/WebsitePage";
 
 function App() {
   return (
