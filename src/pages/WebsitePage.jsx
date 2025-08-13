@@ -7,10 +7,11 @@ import Hero from "../components/webComponents/Hero";
 import Pricing from "../components/webComponents/Pricing";
 import Roadmap from "../components/webComponents/Roadmap";
 import Services from "../components/webComponents/Services";
+import styles from "./WebsitePage.module.css";
 
 const WebsitePage = () => {
   return (
-    <>
+    <div className={styles.websitePage}>
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Header />
         <Hero />
@@ -23,7 +24,7 @@ const WebsitePage = () => {
       </div>
 
       <ButtonGradient />
-    </>
+    </div>
   );
 };
 
