@@ -382,7 +382,7 @@ const Features = () => (
         `}</style>
       </div>
 
-      {/* Holographic title with glow effect */}
+      Holographic title with glow effect
       <AnimatedTitle
         title="Premium Courses"
         containerClass="mt-5 mb-8 !text-[#89CFF0] text-5xl font-bold tracking-wide" // Added mb-8 for bottom margin

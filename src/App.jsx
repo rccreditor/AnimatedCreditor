@@ -12,6 +12,7 @@ import MembershipMC from "./pages/MembershipMC";
 import AboutCreditor from "./components/AboutCreditor";
 import AboutPaul from "./components/AboutPaul";
 import WebsitePage from "./pages/WebsitePage";
+// import Courses from "./components/Courses";
 import GameBanner from "./components/GameBanner";
 
 function AppContent() {
@@ -34,6 +35,7 @@ function AppContent() {
               <MasterClass />
               <About />
               <Features />
+              {/* <Courses /> */}
               <GameBanner/>
               
               <Contact />

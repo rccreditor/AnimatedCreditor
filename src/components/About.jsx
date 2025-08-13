@@ -33,26 +33,28 @@ const About = () => {
           Welcome to Creditor Academy
         </p>
 
-
         <AnimatedTitle
-          title="The Roadmap Series"
+          title="The Roadmap Series "
           containerClass="mt-5 !text-black text-center"
         />
 
         <div className="about-subtext">
           <p>Start Your Journey to Private Wealth, Legal Freedom & Credit Power</p>
           <p className="text-gray-500">
-            by Paulmicheal Rowland, Founder of Creditor Academy 
+            by Paulmicheal Rowland, Founder of Creditor Academy
           </p>
         </div>
       </div>
 
       <div className="h-dvh w-screen" id="clip">
-        <div className="mask-clip-path about-image">
-          <img
-            src="img/Roadmap.webp"
-            alt="Background"
-            className="absolute left-0 top-0 size-full object-cover"
+        <div className="mask-clip-path about-image relative">
+          <video
+            src="videos/Roadmap.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute left-0 top-0 w-full h-full object-cover"
           />
         </div>
       </div>
