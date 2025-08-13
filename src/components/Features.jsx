@@ -152,23 +152,23 @@ export const BentoCard = ({ src, title, description, learnMoreLink, extraContent
             <p className="mt-3 max-w-64 text-sm md:text-base text-white/90 drop-shadow-md">{description}</p>
           )}
           {extraContent && (
-            <div className="mt-4 bg-black/70 p-4 rounded-lg backdrop-blur-sm">
+            <div className="mt-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-4 rounded-lg backdrop-blur-sm">
               <div className="space-y-4">
                 {/* WHAT YOU'LL LEARN */}
                 <motion.div
-                  initial={{ opacity: 0, y: 10 }}
+                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4 }}
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <div className={`bg-${currentContent.color}-600/90 text-white px-3 py-1 rounded-full text-xs font-semibold`}>
+                    <div className={`bg-${currentContent.color}-500/90 text-white px-3 py-1 rounded-full text-xs font-semibold`}>
                       {currentContent.learnTitle}
                     </div>
                   </div>
                   <ul className="space-y-2 text-sm">
                     {currentContent.learnItems.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <item.icon className={`text-${currentContent.color}-400 mt-0.5 flex-shrink-0`} />
+                        <item.icon className={`text-${currentContent.color}-300 mt-0.5 flex-shrink-0`} />
                         <span>{item.text}</span>
                       </li>
                     ))}
@@ -182,14 +182,14 @@ export const BentoCard = ({ src, title, description, learnMoreLink, extraContent
                   transition={{ duration: 0.4, delay: 0.1 }}
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <div className={`bg-${currentContent.color}-600/90 text-white px-3 py-1 rounded-full text-xs font-semibold`}>
+                    <div className={`bg-${currentContent.color}-500/90 text-white px-3 py-1 rounded-full text-xs font-semibold`}>
                       {currentContent.doTitle}
                     </div>
                   </div>
                   <ul className="space-y-2 text-sm">
                     {currentContent.doItems.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
-                        <item.icon className={`text-${currentContent.color}-400 mt-0.5 flex-shrink-0`} />
+                        <item.icon className={`text-${currentContent.color}-300 mt-0.5 flex-shrink-0`} />
                         <span>{item.text}</span>
                       </li>
                     ))}
@@ -201,7 +201,7 @@ export const BentoCard = ({ src, title, description, learnMoreLink, extraContent
         </div>
 
         {isComingSoon ? (
-          <div className="bg-black/80 text-white px-4 py-2 rounded-full text-xs font-medium w-fit">
+          <div className="bg-gradient-to-r from-gray-700/90 to-gray-800/90 text-white px-4 py-2 rounded-full text-xs font-medium w-fit">
             Coming Soon
           </div>
         ) : (
@@ -211,7 +211,7 @@ export const BentoCard = ({ src, title, description, learnMoreLink, extraContent
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={handleClick}
-            className="relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-black/80 px-4 py-2 text-xs uppercase text-white hover:bg-black"
+            className="relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-gradient-to-r from-gray-700/90 to-gray-800/90 px-4 py-2 text-xs uppercase text-white hover:from-gray-600/90 hover:to-gray-700/90"
           >
             <div
               className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
@@ -230,20 +230,167 @@ export const BentoCard = ({ src, title, description, learnMoreLink, extraContent
 };
 
 const Features = () => (
-  <section className="bg-black pb-52">
+  <section className="bg-gradient-to-b from-gray-100 to-gray-200 pb-52">
     <div className="container mx-auto px-3 md:px-10">
-      <div className="px-5 py-32 text-center flex flex-col items-center">
+      <div className="relative overflow-hidden px-5 py-32 text-center flex flex-col items-center">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-[#89CFF0]/20 animate-pulse"></div>
+          <div className="absolute top-1/3 right-1/3 w-48 h-48 rounded-full bg-[#89CFF0]/15 animate-pulse delay-300"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-[#89CFF0]/10 animate-pulse delay-700"></div>
+        </div>
+
+        {/* Holographic title with glow effect */}
         <AnimatedTitle
           title="The Roadmap Series"
-          containerClass="mt-5 !text-blue"
+          containerClass="mt-5 !text-[#89CFF0] text-5xl font-bold tracking-wide"
+          style={{
+            textShadow: "0 0 10px rgba(137, 207, 240, 0.6)",
+            animation: "hologram 3s ease-in-out infinite alternate"
+          }}
         />
-        <p className="font-circular-web text-lg text-blue-50 mt-6">
-          This self-paced, results-focused training series is designed for entrepreneurs, freedom seekers, and anyone ready to take back control of their legal and financial future.
-        </p>
-        <p className="max-w-2xl font-circular-web text-lg text-blue-50 opacity-60 mt-5">
-          The Roadmap Series is your step-by-step blueprint to exit the public system, reclaim your legal identity, and unlock powerful credit and business tools — all while building wealth through private trust structures and lawful commerce.
-        </p>
+
+        {/* Futuristic card with advanced animations */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+          <div className="max-w-4xl mx-auto bg-white/95 backdrop-blur-lg rounded-xl p-8 sm:p-10 shadow-2xl border border-[#89CFF0]/30 hover:border-[#89CFF0]/60 transition-all duration-500 transform hover:scale-[1.005]">
+            {/* Floating text with parallax effect */}
+            <div 
+              className="font-poppins text-2xl sm:text-3xl leading-relaxed sm:leading-relaxed text-gray-800 font-medium mb-8 relative"
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              <p>
+                This self-paced, <span className="relative whitespace-nowrap">
+                  <span className="absolute -inset-2 bg-blue-100/50 rounded-lg -rotate-1 animate-pulse"></span>
+                  <span 
+                    className="relative text-blue-600 font-bold"
+                    style={{
+                      background: "linear-gradient(90deg, #0077cc, #00aaff)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      textShadow: "0 0 8px rgba(0, 170, 255, 0.3)"
+                    }}
+                  >
+                    results-focused training series
+                  </span>
+                </span> is designed for entrepreneurs, freedom seekers, and anyone ready to take back control of their legal and financial future.
+              </p>
+            </div>
+            
+            {/* Cyberpunk-style timeline with animated nodes */}
+            <div 
+              className="relative pl-8 border-l-4 border-[#89CFF0]/50 space-y-8"
+              data-aos="fade-left"
+              data-aos-duration="1000"
+            >
+              {/* Animated node with pulsing effect */}
+              <div className="absolute -left-[21px] top-0 h-10 w-10 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center shadow-lg animate-pulse">
+                <svg 
+                  className="h-5 w-5 text-white" 
+                  fill="currentColor" 
+                  viewBox="0 0 20 20"
+                  style={{
+                    filter: "drop-shadow(0 0 4px rgba(255,255,255,0.8))"
+                  }}
+                >
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              
+              {/* Holographic heading */}
+              <h3 
+                className="font-poppins text-2xl sm:text-3xl font-bold text-gray-800"
+                style={{
+                  background: "linear-gradient(90deg, #0077cc, #00aaff)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent"
+                }}
+              >
+                The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Roadmap Series</span> includes:
+              </h3>
+              
+              {/* Grid with floating animation */}
+              <ul className="grid sm:grid-cols-2 gap-6">
+                {[
+                  "Step-by-step system exit blueprint",
+                  "Legal identity reclamation process",
+                  "Credit & business tool activation",
+                  "Private trust wealth structures",
+                  "Lawful commerce frameworks",
+                  "Ongoing support community"
+                ].map((item, index) => (
+                  <li 
+                    key={index} 
+                    className="flex items-start space-x-4 p-4 bg-white/80 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                    data-aos="zoom-in"
+                    data-aos-delay={index * 100}
+                  >
+                    <div className="flex-shrink-0 h-7 w-7 rounded-full bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center mt-0.5 shadow-inner">
+                      <div 
+                        className="h-2.5 w-2.5 rounded-full bg-white"
+                        style={{
+                          boxShadow: "0 0 6px 2px rgba(137, 207, 240, 0.8)"
+                        }}
+                      ></div>
+                    </div>
+                    <span 
+                      className="font-poppins text-gray-700 font-medium"
+                      style={{
+                        textShadow: "0 1px 2px rgba(0,0,0,0.05)"
+                      }}
+                    >{item}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              {/* Holographic button with hover effects */}
+              <div className="pt-6" data-aos="fade-up" data-aos-delay="300">
+                <button className="group relative px-8 py-4 font-poppins font-bold rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:scale-105">
+                  <span className="relative z-10 flex items-center justify-center space-x-2">
+                    <span>Start Your Journey Today</span>
+                    <svg 
+                      className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                  <span className="absolute top-0 left-0 w-full h-0.5 bg-white/50 animate-beam group-hover:animate-none"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CSS for animations */}
+        <style jsx>{`
+          @keyframes hologram {
+            0% { opacity: 0.9; text-shadow: 0 0 10px rgba(137, 207, 240, 0.6); }
+            50% { opacity: 1; text-shadow: 0 0 15px rgba(137, 207, 240, 0.8), 0 0 30px rgba(137, 207, 240, 0.4); }
+            100% { opacity: 0.9; text-shadow: 0 0 10px rgba(137, 207, 240, 0.6); }
+          }
+          @keyframes beam {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+          }
+          .animate-beam {
+            animation: beam 2s infinite linear;
+          }
+        `}</style>
       </div>
+
+      {/* Holographic title with glow effect */}
+      <AnimatedTitle
+        title="Premium Courses"
+        containerClass="mt-5 mb-8 !text-[#89CFF0] text-5xl font-bold tracking-wide" // Added mb-8 for bottom margin
+        style={{
+          textShadow: "0 0 10px rgba(137, 207, 240, 0.6)",
+          animation: "hologram 3s ease-in-out infinite alternate"
+        }}
+      />
 
       {/* Updated grid with taller height and adjusted row spans */}
       <div className="grid h-[160vh] w-full grid-cols-2 grid-rows-3 gap-7">
@@ -297,11 +444,11 @@ const Features = () => (
 
         {/* Bottom row cards */}
         <BentoTilt className="bento-tilt_2">
-          <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
-            <h1 className="bento-title special-font max-w-64 text-black">
+          <div className="flex size-full flex-col justify-between bg-gradient-to-br from-violet-200 to-violet-300 p-5">
+            <h1 className="bento-title special-font max-w-64 text-gray-800">
               M<b>o</b>re co<b>m</b>ing s<b>o</b>on.
             </h1>
-            <TiLocationArrow className="m-5 scale-[5] self-end" />
+            <TiLocationArrow className="m-5 scale-[5] self-end text-violet-600" />
           </div>
         </BentoTilt>
 
