@@ -35,7 +35,7 @@ const About = () => {
 
 
         <AnimatedTitle
-          title="The R<b>o</b>adm<b>a</b>p Series"
+          title="The Roadmap Series"
           containerClass="mt-5 !text-black text-center"
         />
 

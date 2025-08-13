@@ -100,7 +100,7 @@ export default function BannerPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4 sm:p-5 overflow-hidden">
+    <div className="min-h-screen bg-[#1a202c] flex items-center justify-center p-4 sm:p-5 overflow-hidden">
       <div className="w-full max-w-6xl space-y-6 sm:space-y-8" ref={containerRef}>
         
         {/* Main Card with enhanced entrance */}
@@ -115,8 +115,8 @@ export default function BannerPage() {
               src="/videos/Banner.mp4"
               title={
                 <AnimatedTitle
-                  title="Masterclass Membership"
-                  containerClass="mt-3 sm:mt-5 !text-white"
+                  title="Private Business Launchpad"
+                  containerClass="mt-3 sm:mt-8 !text-white"
                 />
               }
               description="Reclaim Your Legal Identity and Exit the Public System"
@@ -292,7 +292,7 @@ export default function BannerPage() {
                 />
               </motion.div>
 
-              {/* Stats grid with wave animation */}
+              {/* Stats grid with wave animation - Modern Design */}
               <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
                 {stats.map((stat, index) => (
                   <motion.div
@@ -313,10 +313,11 @@ export default function BannerPage() {
                       y: -5,
                       transition: { duration: 0.2 }
                     }}
-                    className="p-3 sm:p-4 rounded-xl relative overflow-hidden group border border-blue-500/40 bg-gray-900/60 backdrop-blur"
+                    className="p-3 sm:p-4 rounded-lg relative overflow-hidden group border-2 border-blue-200 bg-white/90 backdrop-blur-sm shadow-sm"
                   >
+                    {/* Subtle animated gradient background */}
                     <motion.div 
-                      className="absolute inset-0 opacity-40 bg-gradient-to-br from-blue-600 via-cyan-500 to-blue-700 blur-xl"
+                      className="absolute inset-0 opacity-20 bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200 blur-sm"
                       animate={{
                         backgroundPosition: ['0% 0%', '100% 100%'],
                       }}
@@ -327,12 +328,35 @@ export default function BannerPage() {
                         ease: "linear"
                       }}
                     />
-                    <div className="relative text-xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-400">
-                      {stat.value}
+                    
+                    {/* Glow effect on hover */}
+                    <motion.div 
+                      className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-300"
+                      initial={{ scale: 0.9 }}
+                      whileHover={{ scale: 1.1 }}
+                      style={{
+                        background: "radial-gradient(circle at center, rgba(59, 130, 246, 0.4), transparent 70%)"
+                      }}
+                    />
+                    
+                    {/* Content */}
+                    <div className="relative">
+                      <div className="text-2xl sm:text-3xl font-bold text-blue-500 mb-1">
+                        {stat.value}
+                      </div>
+                      <div className="text-xs sm:text-sm font-medium text-blue-500 uppercase tracking-wider">
+                        {stat.label}
+                      </div>
                     </div>
-                    <div className="relative text-xs sm:text-sm text-gray-300 mt-1">
-                      {stat.label}
-                    </div>
+                    
+                    {/* Animated bottom accent */}
+                    <motion.div 
+                      className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-blue-300"
+                      initial={{ scaleX: 0, originX: 0 }}
+                      whileInView={{ scaleX: 1 }}
+                      transition={{ delay: 0.8 + index * 0.1, duration: 0.6 }}
+                      viewport={{ once: false, amount: 0.3 }}
+                    />
                   </motion.div>
                 ))}
               </div>
@@ -350,7 +374,7 @@ export default function BannerPage() {
                 onMouseMove={(e) => handleButtonMouseMove(e, hoverButtonRef)}
               >
                 <motion.div 
-                  className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-200"
+                  className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-200"
                   animate={{
                     backgroundPosition: ['0% 0%', '100% 100%'],
                   }}
@@ -364,7 +388,7 @@ export default function BannerPage() {
                 <button
                   onMouseEnter={() => setHoveredButton('explore')}
                   onMouseLeave={() => setHoveredButton(null)}
-                  className="relative w-full bg-gray-900 hover:bg-gray-800 text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-lg border border-blue-500/50 flex items-center justify-center gap-2 text-sm sm:text-lg transition-all duration-200 overflow-hidden"
+                  className="relative w-full bg-blue-500 hover:bg-blue-400 text-white font-bold py-3 sm:py-4 px-4 sm:px-6 rounded-lg border border-blue-300/50 flex items-center justify-center gap-2 text-sm sm:text-lg transition-all duration-200 overflow-hidden"
                 >
                   <AnimatePresence>
                     {hoveredButton === 'explore' && (
@@ -393,7 +417,7 @@ export default function BannerPage() {
                       } 
                     }}
                   >
-                    <FaRocket className="text-blue-300" />
+                    <FaRocket className="text-blue-100" />
                   </motion.div>
                   <span>Explore Now</span>
                 </button>

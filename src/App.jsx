@@ -12,6 +12,7 @@ import MembershipMC from "./pages/MembershipMC";
 import AboutCreditor from "./components/AboutCreditor";
 import AboutPaul from "./components/AboutPaul";
 import WebsitePage from "./pages/WebsitePage";
+import GameBanner from "./components/GameBanner";
 
 function AppContent() {
   const location = useLocation();
@@ -33,6 +34,7 @@ function AppContent() {
               <MasterClass />
               <About />
               <Features />
+              <GameBanner/>
               <Story />
               <Contact />
             </>
