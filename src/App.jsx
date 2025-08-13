@@ -35,7 +35,7 @@ function AppContent() {
               <About />
               <Features />
               <GameBanner/>
-              <Story />
+              
               <Contact />
             </>
           }
